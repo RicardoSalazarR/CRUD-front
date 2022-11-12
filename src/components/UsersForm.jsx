@@ -22,15 +22,17 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
     const submit = (data) => {
         if (selectedUser) {
             putUser(data)
+            reset(defaultValues)
         } else {
             postUser(data)
+            reset(defaultValues)
         }
     }
 
 
     return (
         <form
-            className=''
+            className='usersForm'
             onSubmit={handleSubmit(submit)}
         >
             <div>

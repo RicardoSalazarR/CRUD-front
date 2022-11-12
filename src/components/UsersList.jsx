@@ -1,17 +1,25 @@
 import React from 'react';
+import 'boxicons'
 
-const UsersList = ({usersList,selectUser,deleteUser}) => {
+const UsersList = ({ usersList, selectUser, deleteUser }) => {
     return (
-        <ul>
+        <ul className='usersList'>
             {
-                usersList.map(user=>(
-                    <li key={user.id}>
-                        <div><b>Name: </b>{user.first_name}</div>
-                        <div><b>Last Name: </b>{user.last_name}</div>
-                        <div><b>email: </b>{user.email}</div>
-                        <div><b>birthday: </b>{user.birthday}</div>
-                        <button onClick={()=>{deleteUser(user.id)}}>Delete</button>
-                        <button onClick={()=>{selectUser(user)}}>Select</button>
+                usersList.map(user => (
+                    <li
+                        key={user.id}
+                        className='user-card'
+                    >
+                        <div className='list-content'>
+                            
+                            <div><b>{user.first_name}{' '}{user.last_name}</b></div>
+                            <div>{user.email}</div>
+                            <div className='birthday'><box-icon name='gift'></box-icon>{user.birthday}</div>
+                        </div>
+                        <div className='list-buttons'>
+                            <button onClick={() => { deleteUser(user.id) }}><box-icon name='trash' color='red' ></box-icon></button>
+                            <button onClick={() => { selectUser(user) }}><box-icon name='pencil' type='solid' ></box-icon></button>
+                        </div>
                     </li>
                 ))
             }
