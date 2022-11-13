@@ -32,7 +32,6 @@ text-align: center;
 color: rgb(79, 78, 78);
 }
 
-
 .usersForm{
   width: 45%;
   height: 100vh;
@@ -43,6 +42,7 @@ color: rgb(79, 78, 78);
   background-color: #fbf2c4;
   gap: 3rem;
 }
+
 .usersList{
   width: 55%;
   height: 100vh;
@@ -62,10 +62,12 @@ color: rgb(79, 78, 78);
   flex-direction: column;
   gap: 10px;
 }
+
 .list-buttons{
   margin-left: auto;
   margin-right: 1rem;
 }
+
 .list-buttons>button{
   padding: 5px;
   border: none;
