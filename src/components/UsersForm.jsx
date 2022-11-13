@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form'
 
@@ -30,6 +31,7 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
     }
 
 
+    const [showPassword, setShowPassword] = useState(false)
     return (
         <form
             className='usersForm'
@@ -46,13 +48,23 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
                 </div>
                 <div className='label-input'>
                     <label htmlFor="password">Password: </label>
-                    <input {...register('password')} type="password" id='password' />
+                    <div className='password'>
+                        <input {...register('password')} type={showPassword ? 'text' : 'password'} id='password' />
+                        <label htmlFor="password-checkbox">
+                            {showPassword ? <box-icon name='low-vision'></box-icon> : <box-icon name='show' ></box-icon>}
+                        </label>
+                        <input
+                            type="checkbox"
+                            id='password-checkbox'
+                            onChange={() => setShowPassword(!showPassword)}
+                        />
+                    </div>
                 </div>
                 <div className='label-input'>
                     <label htmlFor="email">Email: </label>
                     <input {...register('email')} type="email" id='email' />
                 </div>
-                <div className='label-input'>
+                <div className='label-input birthday-input'>
                     <label htmlFor="birthday">Birthday: </label>
                     <input {...register('birthday')} type="date" id='birthday' />
                 </div>
