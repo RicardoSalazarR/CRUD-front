@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  gap: 0.5rem;
 }
 
 .label-input input{
@@ -27,7 +28,10 @@ display: block;
 width: 100%;
 border-radius: 5px;
 border: 1px solid rgb(134, 134, 134);
+text-align: center;
+color: rgb(79, 78, 78);
 }
+
 
 .usersForm{
   width: 45%;
@@ -37,7 +41,7 @@ border: 1px solid rgb(134, 134, 134);
   justify-content: center;
   align-items: center;
   background-color: #fbf2c4;
-  gap: 1rem;
+  gap: 3rem;
 }
 .usersList{
   width: 55%;
@@ -86,5 +90,13 @@ border: 1px solid rgb(134, 134, 134);
 
 .btn-submit{
   padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #c7522a;
+  color: white;
+}
 
+.btn-submit:hover{
+  background-color: #e88564;
+  cursor: pointer;
 }
