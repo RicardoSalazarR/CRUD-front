@@ -13,6 +13,22 @@
   flex-direction: row-reverse;
 }
 
+.form-inputs{
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.label-input input{
+display: block;
+width: 100%;
+border-radius: 5px;
+border: 1px solid rgb(134, 134, 134);
+}
+
 .usersForm{
   width: 45%;
   height: 100vh;
@@ -21,6 +37,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fbf2c4;
+  gap: 1rem;
 }
 .usersList{
   width: 55%;
