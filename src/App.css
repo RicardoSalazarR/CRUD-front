@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Sono', sans-serif;
 }
 
-body{
-  
-}
 
 .App{
   display: flex;
@@ -19,11 +19,13 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: #fbf2c4;
 }
 .usersList{
   width: 55%;
   height: 100vh;
-  background-color: rgb(185, 212, 164);
+  background-color: #74a892;
   padding-top: 2rem;
 
   display: flex;
@@ -63,4 +65,9 @@ body{
   flex-direction: row;
   align-items: center;
   border-radius: 7px;
+}
+
+.btn-submit{
+  padding: 0.5rem 1rem;
+
 }

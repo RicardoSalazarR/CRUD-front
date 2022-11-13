@@ -55,7 +55,7 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
                 <label htmlFor="birthday">Birthday: </label>
                 <input {...register('birthday')} type="date" id='birthday' />
             </div>
-            <button>Sumbmit</button>
+            <button className='btn-submit'>Submit</button>
         </form>
     );
 };
