@@ -14,7 +14,7 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
     useEffect(() => {
         if (selectedUser) {
             reset(selectedUser)
-        }else{
+        } else {
             reset(defaultValues)
         }
     }, [selectedUser])
@@ -45,15 +45,15 @@ const UsersForm = ({ postUser, selectedUser, putUser }) => {
             </div>
             <div>
                 <label htmlFor="password">Password: </label>
-                <input {...register('password')} type="text" id='password' />
+                <input {...register('password')} type="password" id='password' />
             </div>
             <div>
                 <label htmlFor="email">email: </label>
-                <input {...register('email')} type="text" id='email' />
+                <input {...register('email')} type="email" id='email' />
             </div>
             <div>
                 <label htmlFor="birthday">Birthday: </label>
-                <input {...register('birthday')} type="text" id='birthday' />
+                <input {...register('birthday')} type="date" id='birthday' />
             </div>
             <button>Sumbmit</button>
         </form>
