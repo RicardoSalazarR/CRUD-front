@@ -11,10 +11,10 @@ const UsersList = ({ usersList, selectUser, deleteUser }) => {
                         className='user-card'
                     >
                         <div className='list-content'>
-                            
-                            <div><b>{user.first_name}{' '}{user.last_name}</b></div>
+
+                            <div className='name-list'><b>{user.first_name}{' '}{user.last_name}</b></div>
                             <div>{user.email}</div>
-                            <div className='birthday'><box-icon name='gift'></box-icon>{user.birthday}</div>
+                            <div className='birthday'><box-icon name='gift'></box-icon> {user.birthday}</div>
                         </div>
                         <div className='list-buttons'>
                             <button onClick={() => { deleteUser(user.id) }}><box-icon name='trash' color='red' ></box-icon></button>
